@@ -46,17 +46,18 @@
         </div>
       </div>
 
-      <form class="rounded-3xl border border-slate-500/40 bg-[#081730] p-6 shadow-xl shadow-black/20">
+      <form id="contact-form" class="rounded-3xl border border-slate-500/40 bg-[#081730] p-6 shadow-xl shadow-black/20">
         <h2 class="text-2xl font-semibold">Send a message</h2>
         <div class="mt-6 space-y-4">
-          <input type="text" placeholder="Your full name" class="w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring">
-          <input type="email" placeholder="Your email address" class="w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring">
-          <input type="text" placeholder="Organization (optional)" class="w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring">
-          <textarea placeholder="How would you like to collaborate?" class="h-32 w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring"></textarea>
-          <button type="button" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-cyan-200">
+          <input id="name" name="name" type="text" required placeholder="Your full name" class="w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring">
+          <input id="email" name="email" type="email" required placeholder="Your email address" class="w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring">
+          <input id="organization" name="organization" type="text" placeholder="Organization (optional)" class="w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring">
+          <textarea id="message" name="message" required placeholder="How would you like to collaborate?" class="h-32 w-full rounded-xl border border-slate-600/60 bg-slate-950/70 px-4 py-3 text-sm outline-none ring-cyan-300/60 focus:ring"></textarea>
+          <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-cyan-200">
             <i data-feather="send" class="h-4 w-4"></i>
             Submit Inquiry
           </button>
+          <p class="text-xs text-slate-400">Submitting opens your email app with the inquiry pre-filled.</p>
         </div>
       </form>
     </section>
@@ -129,6 +130,26 @@
       menuButton.addEventListener("click", () => {
         const isHidden = mobileMenu.classList.toggle("hidden");
         menuButton.setAttribute("aria-expanded", String(!isHidden));
+      });
+    }
+
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const destinationEmail = "omondieric2010@gmail.com";
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const organization = document.getElementById("organization").value.trim() || "Not provided";
+        const message = document.getElementById("message").value.trim();
+        const subject = encodeURIComponent("Portfolio Collaboration Request");
+        const body = encodeURIComponent(
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Organization: " + organization + "\n\n" +
+          "Message:\n" + message
+        );
+        window.location.href = "mailto:" + destinationEmail + "?subject=" + subject + "&body=" + body;
       });
     }
   </script>
