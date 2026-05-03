@@ -7,7 +7,7 @@
   <meta name="description" content="Omondi Eric — Gender Equality Champion, CEO, Mandela Washington Fellow, Rotarian. Last-mile female health & hygiene infrastructure for gender equality and circular economy. Busia, Eastern Region, Uganda.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/portfolio.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -52,22 +52,9 @@
     <!-- Hero -->
     <section class="grid items-center gap-10 lg:min-h-[68vh] lg:grid-cols-12 lg:gap-14">
       <div class="animate-in space-y-5 lg:col-span-6">
-        <p class="max-w-2xl flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs font-medium leading-snug text-slate-300 sm:text-sm">
-          <span>Gender Equality Champion</span>
-          <span class="text-aqua/40" aria-hidden="true">|</span>
-          <span>Last-Mile Female Health &amp; Hygiene Infrastructure</span>
-          <span class="text-aqua/40" aria-hidden="true">|</span>
-          <span>Circular Economy</span>
-          <span class="text-aqua/40" aria-hidden="true">|</span>
-          <span>Mandela Washington Fellow</span>
-          <span class="text-aqua/40" aria-hidden="true">|</span>
-          <span>Rotarian</span>
-          <span class="text-aqua/40" aria-hidden="true">|</span>
-          <span>CEO</span>
-        </p>
-        <h1 class="font-display text-3xl font-semibold leading-[1.1] tracking-tight text-white sm:text-4xl md:text-5xl lg:text-[2.75rem]">
-          <span class="text-gradient">Last-Mile Female Health &amp; Hygiene Infrastructure</span>
-          <span class="text-white"> for gender equality and a circular economy.</span>
+        <h1 class="hero-headline font-display max-w-3xl text-[1.65rem] font-bold leading-[1.12] tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)] sm:text-3xl md:text-4xl lg:text-[2.65rem] xl:text-[3.1rem]">
+          <span class="text-gradient font-bold">Last-Mile Female Health &amp; Hygiene Infrastructure</span>
+          <span class="font-bold text-white"> for gender equality and a circular economy.</span>
         </h1>
         <p class="max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg">
           I am Omondi Eric — <strong class="font-medium text-slate-300">CEO</strong> building practical female health &amp; hygiene access, trainings, and advocacy through <strong class="font-medium text-slate-300">Esonga Menstrual Care</strong>, grounded in circular, last-mile models and gender equality.</p>
@@ -91,14 +78,16 @@
       </div>
       <div class="animate-in-delay relative lg:col-span-6">
         <div class="hero-photo-ring relative mx-auto max-w-md lg:max-w-none">
-          <img
-            src="assets/hero-pr.png"
-            alt="Professional portrait of Omondi Eric"
-            class="img-cover relative aspect-[562/683] max-h-[min(520px,78vh)] w-full object-cover sm:rounded-2xl"
-            width="661"
-            height="662"
-            onerror="this.onerror=null;this.src='assets/eric-hero-portrait.png';"
-          />
+          <div class="hero-photo-frame relative overflow-hidden rounded-xl sm:rounded-2xl">
+            <img
+              src="assets/hero-pr.png"
+              alt="Professional portrait of Omondi Eric"
+              class="hero-photo-img img-cover relative aspect-[562/683] max-h-[min(520px,78vh)] w-full object-cover rounded-none border-0"
+              width="661"
+              height="662"
+              onerror="this.onerror=null;this.src='assets/eric-hero-portrait.png';"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -231,25 +220,44 @@
     </section>
   </main>
 
-  <footer class="border-t border-white/10 bg-midnight/90 py-12">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-        <div class="max-w-md">
-          <p class="font-display text-lg font-semibold text-white">Omondi Eric</p>
-          <p class="mt-2 text-sm leading-relaxed text-slate-500">Esonga Menstrual Care · Busia · trainings, access, advocacy.</p>
+  <footer class="site-footer">
+    <div class="site-footer-grid-bg" aria-hidden="true"></div>
+    <div class="site-footer-inner mx-auto max-w-6xl px-6 py-14 sm:px-8 sm:py-16">
+      <div class="grid gap-11 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-14">
+        <div class="lg:col-span-5">
+          <p class="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">Omondi Eric</p>
+          <p class="mt-5 max-w-sm text-[0.9375rem] leading-relaxed text-slate-400">
+            Esonga Menstrual Care — last-mile female health &amp; hygiene, trainings, advocacy, and gender-equal systems from Busia outward.</p>
+          <div class="footer-pin">
+            <i data-feather="map-pin" aria-hidden="true"></i>
+            <span><span class="text-slate-200">Busia</span>, Eastern Region, Uganda</span>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <a href="https://www.linkedin.com/company/latek-stay-alliance-uganda/?originalSubdomain=ug" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/12 p-2.5 text-slate-400 hover:border-aqua/40 hover:text-aqua" aria-label="LinkedIn"><i data-feather="linkedin" class="h-4 w-4"></i></a>
-          <a href="https://www.facebook.com/USEmbassyUganda/posts/introducing-2025-mandela-washington-fellow-omondi-eric-the-chief-executive-offic/1138027471699573/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/12 p-2.5 text-slate-400 hover:border-aqua/40 hover:text-aqua" aria-label="Facebook"><i data-feather="facebook" class="h-4 w-4"></i></a>
-          <a href="https://www.monitor.co.ug/uganda/oped/commentary/waste-is-not-the-enemy-neglect-is-5181540" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/12 p-2.5 text-slate-400 hover:border-aqua/40 hover:text-aqua" aria-label="Publications"><i data-feather="edit-3" class="h-4 w-4"></i></a>
-          <a href="contact.html" class="rounded-full border border-white/12 p-2.5 text-slate-400 hover:border-aqua/40 hover:text-aqua" aria-label="Contact"><i data-feather="mail" class="h-4 w-4"></i></a>
+        <div class="lg:col-span-3">
+          <p class="footer-col-title"><i data-feather="compass" aria-hidden="true"></i> Navigate</p>
+          <nav class="flex flex-col gap-0.5" aria-label="Footer">
+            <a href="index.html" class="footer-link"><i data-feather="chevron-right"></i><span>Home</span></a>
+            <a href="about.html" class="footer-link"><i data-feather="chevron-right"></i><span>About</span></a>
+            <a href="services.html" class="footer-link"><i data-feather="chevron-right"></i><span>Services</span></a>
+            <a href="impact.html" class="footer-link"><i data-feather="chevron-right"></i><span>Impact</span></a>
+            <a href="contact.html" class="footer-link"><i data-feather="chevron-right"></i><span>Contact</span></a>
+          </nav>
+        </div>
+        <div class="sm:col-span-2 lg:col-span-4">
+          <p class="footer-col-title"><i data-feather="share-2" aria-hidden="true"></i> Connect</p>
+          <a href="mailto:omondieric2010@gmail.com" class="footer-link mb-3 inline-flex"><i data-feather="send"></i><span>Partner &amp; media inquiries</span></a>
+          <div class="footer-social-row mt-5">
+            <a href="https://www.linkedin.com/company/latek-stay-alliance-uganda/?originalSubdomain=ug" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+            <a href="https://www.facebook.com/USEmbassyUganda/posts/introducing-2025-mandela-washington-fellow-omondi-eric-the-chief-executive-offic/1138027471699573/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="U.S. Embassy Uganda feature"><i data-feather="facebook"></i></a>
+            <a href="https://www.monitor.co.ug/uganda/oped/commentary/waste-is-not-the-enemy-neglect-is-5181540" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Articles in Daily Monitor"><i data-feather="edit-3"></i></a>
+          </div>
         </div>
       </div>
-      <div class="mt-8 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-slate-500 md:flex-row md:items-center md:justify-between sm:text-sm">
-        <p>© <span id="year"></span> Omondi Eric. All rights reserved.</p>
-        <a href="https://www.cewas.org/articles/understanding-female-health-hygiene-entrepreneurship-in-kenya-uganda-and-ghana" class="inline-flex items-center gap-2 text-slate-400 hover:text-aqua" target="_blank" rel="noopener noreferrer">
-          <i data-feather="external-link" class="h-4 w-4"></i>Featured by Cewas
-        </a>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-7 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-8">
+        <p class="flex items-center gap-2 text-sm text-slate-500"><i data-feather="award" class="h-4 w-4 shrink-0 text-aqua/70"></i>© <span id="year"></span> Omondi Eric. All rights reserved.</p>
+        <a href="https://www.cewas.org/articles/understanding-female-health-hygiene-entrepreneurship-in-kenya-uganda-and-ghana" class="footer-muted-link group" target="_blank" rel="noopener noreferrer"><i data-feather="external-link"></i><span>Featured perspective — <span class="text-slate-300 group-hover:text-aqua">Cewas</span></span></a>
       </div>
     </div>
   </footer>
