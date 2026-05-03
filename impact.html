@@ -4,164 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omondi Eric | Impact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { midnight: "#061126", navy: "#0a1f44", cobalt: "#123a7b", aqua: "#30c5ff" },
+          fontFamily: { sans: ["Outfit", "system-ui", "sans-serif"], display: ["Fraunces", "Georgia", "serif"] }
+        }
+      }
+    };
+  </script>
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body class="bg-[#04102a] text-slate-100 antialiased">
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-700/40 bg-[#071833]/85 backdrop-blur-xl shadow-lg shadow-black/30">
-    <nav class="mx-auto max-w-6xl px-4 py-4 sm:px-6">
-      <div class="flex items-center justify-between">
-        <a href="index.html" class="text-lg font-semibold tracking-wide">Omondi Eric</a>
-        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center rounded-md border border-slate-600/70 p-2 text-slate-200 transition hover:text-cyan-300 md:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i data-feather="menu" class="h-5 w-5"></i>
-        </button>
-      <div class="hidden items-center gap-2 text-xs sm:text-sm md:flex md:gap-6">
-        <a class="text-slate-200 transition hover:text-cyan-300" href="index.html">Home</a>
-        <a class="text-slate-200 transition hover:text-cyan-300" href="about.html">About</a>
-        <a class="rounded-full border border-cyan-300/70 bg-cyan-300/10 px-4 py-2 text-cyan-200" href="impact.html">Impact</a>
-        <a class="text-slate-200 transition hover:text-cyan-300" href="contact.html">Contact</a>
-      </div>
-      </div>
-      <div id="mobile-menu" class="mt-3 hidden space-y-2 rounded-xl border border-slate-700/60 bg-[#071833]/95 p-3 md:hidden">
-        <a class="block rounded-lg px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-300" href="index.html">Home</a>
-        <a class="block rounded-lg px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-300" href="about.html">About</a>
-        <a class="block rounded-lg border border-cyan-300/70 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200" href="impact.html">Impact</a>
-        <a class="block rounded-lg px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-300" href="contact.html">Contact</a>
+<body class="portfolio-page antialiased">
+  <header class="pointer-events-none fixed inset-x-0 top-6 z-50 flex justify-center px-4">
+    <nav class="nav-shell pointer-events-auto relative z-50 flex w-full max-w-6xl flex-wrap items-center justify-between gap-2 rounded-2xl px-3 py-2.5 sm:px-5 sm:py-3">
+      <a href="index.html" class="font-display shrink-0 text-base font-semibold text-white sm:text-lg">Omondi Eric</a>
+      <button id="mobile-menu-button" type="button" class="inline-flex shrink-0 rounded-lg border border-white/15 p-2 text-slate-200 hover:border-aqua/40 hover:text-aqua md:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-feather="menu" class="h-5 w-5"></i>
+      </button>
+      <div class="hidden items-center gap-0.5 text-xs font-medium md:flex xl:gap-1 xl:text-sm">
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="index.html">Home</a>
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="about.html">About</a>
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="services.html">Services</a>
+        <a class="rounded-full bg-white/[0.1] px-3 py-1.5 text-aqua xl:px-4" href="impact.html">Impact</a>
+        <a href="contact.html" class="nav-contact-btn ml-1 shrink-0 py-2 text-xs xl:ml-2 xl:text-sm">Contact</a>
       </div>
     </nav>
+    <div id="mobile-menu" class="pointer-events-auto fixed inset-x-4 top-28 z-[60] hidden max-h-[calc(100vh-8rem)] overflow-y-auto rounded-xl border border-white/10 bg-midnight py-3 md:!hidden">
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="index.html">Home</a>
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="about.html">About</a>
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="services.html">Services</a>
+      <a class="block px-4 py-2.5 text-sm font-medium text-aqua" href="impact.html">Impact</a>
+      <div class="px-3 pt-2">
+        <a href="contact.html" class="nav-contact-btn !flex w-full justify-center text-sm no-underline">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 pb-14 pt-36 sm:px-6">
+  <main class="relative mx-auto max-w-6xl px-4 pb-24 pt-32 sm:px-6 lg:pb-28 lg:pt-36">
+    <div class="-mx-4 mb-10 sm:-mx-6">
+      <img src="assets/eric-hero.png" alt="Omondi Eric representing Esonga menstrual health work at a gathering" class="aspect-[21/9] w-full rounded-none border-y border-white/10 object-cover sm:aspect-[21/8] md:rounded-lg md:border max-w-none" loading="lazy" />
+    </div>
+
     <section>
-      <p class="text-xs uppercase tracking-[0.2em] text-cyan-300">Impact Areas</p>
-      <h1 class="mt-3 text-4xl font-bold md:text-5xl">From Access to Action</h1>
-      <p class="mt-5 max-w-3xl leading-8 text-slate-200/90">
-        The impact strategy combines product access, community training, and public advocacy to reduce period poverty and keep girls in school.
-      </p>
+      <p class="eyebrow">Evidence &amp; field model</p>
+      <h1 class="font-display mt-3 text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl">Impact from access to advocacy</h1>
+      <p class="mt-8 max-w-3xl leading-relaxed text-slate-400">
+        Programming threads product reach, transferable skills (reusable pads, soap), stigma-aware campaigns, and school continuity signals into one braid — aligning with Soroti-linked press, Nexus rights framing, and Nuffic-style WASH integrations Eric cites publicly.</p>
     </section>
 
-    <section class="mt-8 grid gap-4 md:grid-cols-2">
-      <article class="rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <i data-feather="truck" class="h-6 w-6 text-cyan-300"></i>
-        <h2 class="mt-3 text-lg font-semibold">Last-Mile Distribution</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Mobile kiosks and local networks bring affordable menstrual hygiene products closer to girls and women in hard-to-reach communities.
-        </p>
-      </article>
-      <article class="rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <i data-feather="tool" class="h-6 w-6 text-cyan-300"></i>
-        <h2 class="mt-3 text-lg font-semibold">Skills and Production</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Community workshops teach reusable pad and liquid soap making. Public reports from Soroti noted large practical trainings that included women, girls, and men.
-        </p>
-      </article>
-      <article class="rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <i data-feather="book" class="h-6 w-6 text-cyan-300"></i>
-        <h2 class="mt-3 text-lg font-semibold">Education Retention</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Reducing period-related absenteeism helps girls remain active in class and continue their academic progression.
-        </p>
-      </article>
-      <article class="rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <i data-feather="mic" class="h-6 w-6 text-cyan-300"></i>
-        <h2 class="mt-3 text-lg font-semibold">Stigma Reduction</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Advocacy campaigns encourage open conversations on menstruation and strengthen supportive attitudes among men and community leaders.
-        </p>
-      </article>
-    </section>
-
-    <section class="mt-8 rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-6 md:p-7">
-      <h2 class="text-2xl font-semibold">Detail Highlights from Sources</h2>
-      <div class="mt-6 grid gap-4 md:grid-cols-3">
-        <article class="rounded-2xl border border-slate-600/40 p-5">
-          <p class="text-xs uppercase tracking-wider text-cyan-300">Soroti Training</p>
-          <p class="mt-2 text-sm leading-7 text-slate-300">
-            Reported practical five-day model that included reusable pads, soap production, and peer-to-peer scaling.
-          </p>
-        </article>
-        <article class="rounded-2xl border border-slate-600/40 p-5">
-          <p class="text-xs uppercase tracking-wider text-cyan-300">Rights Perspective</p>
-          <p class="mt-2 text-sm leading-7 text-slate-300">
-            Public interviews frame period poverty as a human rights issue affecting education, health, and equal opportunity.
-          </p>
-        </article>
-        <article class="rounded-2xl border border-slate-600/40 p-5">
-          <p class="text-xs uppercase tracking-wider text-cyan-300">WASH Integration</p>
-          <p class="mt-2 text-sm leading-7 text-slate-300">
-            Broader Uganda programs emphasize integrated SRHR, menstrual health, and WASH approaches aligned with Eric's field model.
-          </p>
-        </article>
+    <section class="page-section">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">Pillars</p>
+          <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Where change surfaces</h2>
+        </div>
+      </div>
+      <div class="divide-y divide-slate-600/35 border-y border-slate-600/35">
+        <div class="flex gap-4 py-7">
+          <i data-feather="truck" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <p class="text-sm leading-relaxed text-slate-500"><strong class="text-white">Distribution</strong> — Kiosk routes and SACCO-adjacent handoffs so menstrual supplies move like other weekly essentials.</p>
+        </div>
+        <div class="flex gap-4 py-7">
+          <i data-feather="tool" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <p class="text-sm leading-relaxed text-slate-500"><strong class="text-white">Production skills</strong> — Multi-day pad and soap curricula where men practise alongside girls, normalising care labour.</p>
+        </div>
+        <div class="flex gap-4 py-7">
+          <i data-feather="book" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <p class="text-sm leading-relaxed text-slate-500"><strong class="text-white">School continuity</strong> — Changing rooms paired with absorbent predictability plus anonymised SMC dialogues.</p>
+        </div>
+        <div class="flex gap-4 py-7">
+          <i data-feather="mic" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <p class="text-sm leading-relaxed text-slate-500"><strong class="text-white">Stigma reduction</strong> — Clergy scripting, adolescent coalitions, and radio arcs that penalise menstrual mockery sustainably.</p>
+        </div>
       </div>
     </section>
 
-    <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 text-[#0a1f44] md:p-7">
-      <h2 class="text-2xl font-semibold">Featured Research Context</h2>
-      <p class="mt-4 text-sm leading-7 text-slate-600">
-        A regional analysis from Cewas highlights barriers and entrepreneurship opportunities in female health and hygiene across Kenya, Uganda, and Ghana.
-      </p>
-      <a
-        href="https://www.cewas.org/articles/understanding-female-health-hygiene-entrepreneurship-in-kenya-uganda-and-ghana"
-        class="mt-6 inline-flex items-center gap-2 rounded-full border border-[#0a1f44]/30 px-4 py-2 text-sm font-semibold text-[#0a1f44] transition hover:bg-[#0a1f44]/10"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i data-feather="external-link" class="h-4 w-4"></i>
-        Read Cewas Article
-      </a>
-    </section>
-
-    <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 text-[#0a1f44] md:p-7">
-      <h2 class="text-2xl font-semibold">References</h2>
-      <ul class="mt-5 space-y-3 text-sm text-slate-600">
-        <li><a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://thecooperator.news/soroti-residents-skilled-in-making-reusable-sanitary-pads-liquid-soap/">The Cooperator: Soroti residents skilled in reusable sanitary pads and soap</a></li>
-        <li><a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://nexusmedia.ug/menstruation-period-poverty-a-denial-of-human-rights/">Nexus Media: Menstruation period poverty feature</a></li>
-        <li><a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://www.nuffic.nl/en/news/improving-menstrual-health-in-uganda-beyond-schools">Nuffic: Improving menstrual health in Uganda beyond schools</a></li>
-        <li><a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://www.monitor.co.ug/uganda/oped/commentary/waste-is-not-the-enemy-neglect-is-5181540">Daily Monitor: Waste is not the enemy, neglect is</a></li>
-      </ul>
-    </section>
-
-    <section class="mt-8 rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-6 md:p-7">
-      <h2 class="text-2xl font-semibold">Program Architecture</h2>
-      <div class="mt-6 grid gap-4 md:grid-cols-3">
-        <article class="rounded-2xl border border-slate-600/40 p-5">
-          <p class="text-xs uppercase tracking-wider text-cyan-300">01 - Access</p>
-          <p class="mt-2 text-sm leading-7 text-slate-300">Affordable reusable products are brought closer to communities through local distribution and practical demonstrations.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-600/40 p-5">
-          <p class="text-xs uppercase tracking-wider text-cyan-300">02 - Capacity</p>
-          <p class="mt-2 text-sm leading-7 text-slate-300">Master training and peer learning help communities produce pads and hygiene soap while spreading knowledge sustainably.</p>
-        </article>
-        <article class="rounded-2xl border border-slate-600/40 p-5">
-          <p class="text-xs uppercase tracking-wider text-cyan-300">03 - Advocacy</p>
-          <p class="mt-2 text-sm leading-7 text-slate-300">Rights-based campaigns and public commentary promote lasting social norm change around menstruation and sanitation.</p>
-        </article>
+    <section class="section-band py-12 sm:py-14">
+      <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:gap-14 sm:px-6 lg:grid-cols-3">
+        <div>
+          <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-aqua">Soroti training</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400"><em class="not-italic text-slate-300">The Cooperator</em>-style reporting captured pad + soap skills bootcamps that alumni teach forward.</p>
+        </div>
+        <div class="border-t border-slate-500/35 pt-10 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+          <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-aqua">Rights</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Nexus Media interviews frame period deprivation as intertwined with schooling and humane sanitation access.</p>
+        </div>
+        <div class="border-t border-slate-500/35 pt-10 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+          <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-aqua">WASH linkage</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">Regional briefings stress menstrual dignity stalls when boreholes exist but latrine lighting or disposal paths fail girls.</p>
+        </div>
       </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">Evidence</p>
+          <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Research &amp; references</h2>
+        </div>
+      </div>
+      <p class="mb-8 max-w-2xl text-sm text-slate-500">
+        Cewas&apos; regional analysis underscores barriers female hygiene entrepreneurs navigate — language Eric adopts when structuring blended finance dialogues alongside county partners.</p>
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-14">
+        <div>
+          <img src="assets/eric-group.png" alt="Peer exchange visit with Eric Omondi and colleagues learning together" class="img-cover mb-8 aspect-video border border-white/10 object-cover" loading="lazy" />
+          <a href="https://www.cewas.org/articles/understanding-female-health-hygiene-entrepreneurship-in-kenya-uganda-and-ghana" class="inline-flex items-center gap-2 text-sm font-semibold text-aqua hover:underline" target="_blank" rel="noopener noreferrer">
+            <i data-feather="external-link" class="h-4 w-4"></i> Read Cewas comparative article</a>
+        </div>
+        <ul class="space-y-5 border-l border-aqua/25 pl-6 text-sm text-slate-400">
+          <li><a class="underline-offset-2 hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://thecooperator.news/soroti-residents-skilled-in-making-reusable-sanitary-pads-liquid-soap/">The Cooperator — Soroti pads &amp; soap training</a></li>
+          <li><a class="underline-offset-2 hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://nexusmedia.ug/menstruation-period-poverty-a-denial-of-human-rights/">Nexus Media — menstrual rights feature</a></li>
+          <li><a class="underline-offset-2 hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://www.nuffic.nl/en/news/improving-menstrual-health-in-uganda-beyond-schools">Nuffic — menstrual health beyond schools</a></li>
+          <li><a class="underline-offset-2 hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://www.monitor.co.ug/uganda/oped/commentary/waste-is-not-the-enemy-neglect-is-5181540"><em class="not-italic">Daily Monitor</em> — neglect &amp; sanitation op-ed</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">Architecture</p>
+          <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Program spine</h2>
+        </div>
+      </div>
+      <ol class="mt-4 grid gap-6 sm:grid-cols-3">
+        <li class="relative border-l-2 border-aqua/40 py-2 pl-5 text-sm text-slate-500"><strong class="text-aqua">01</strong> Access — repeatable supply loops.</li>
+        <li class="relative border-l-2 border-aqua/40 py-2 pl-5 text-sm text-slate-500"><strong class="text-aqua">02</strong> Capacity — certify peers maintaining quality.</li>
+        <li class="relative border-l-2 border-aqua/40 py-2 pl-5 text-sm text-slate-500"><strong class="text-aqua">03</strong> Advocacy — menstrual rows on council agendas.</li>
+      </ol>
     </section>
   </main>
 
-  <footer class="border-t border-slate-700/50 bg-[#040d21] py-10">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p class="text-base font-semibold">Omondi Eric</p>
-          <p class="mt-1 text-sm text-slate-400">Evidence-led impact in menstrual health and community WASH systems.</p>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="https://www.linkedin.com/company/latek-stay-alliance-uganda/?originalSubdomain=ug" target="_blank" rel="noopener noreferrer" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="LinkedIn">
-            <i data-feather="linkedin" class="h-4 w-4"></i>
-          </a>
-          <a href="https://www.facebook.com/USEmbassyUganda/posts/introducing-2025-mandela-washington-fellow-omondi-eric-the-chief-executive-offic/1138027471699573/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Facebook">
-            <i data-feather="facebook" class="h-4 w-4"></i>
-          </a>
-          <a href="https://thecooperator.news/soroti-residents-skilled-in-making-reusable-sanitary-pads-liquid-soap/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="News">
-            <i data-feather="file-text" class="h-4 w-4"></i>
-          </a>
-          <a href="contact.html" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Contact">
-            <i data-feather="mail" class="h-4 w-4"></i>
-          </a>
-        </div>
-      </div>
+  <footer class="border-t border-white/10 bg-midnight/90 py-12">
+    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-6 px-6 text-sm text-slate-500 sm:flex-row sm:items-center">
+      <span class="font-display text-white">Omondi Eric</span>
+      <a href="contact.html" class="text-aqua hover:underline">Partner on programmes →</a>
     </div>
   </footer>
 
@@ -171,8 +155,8 @@
     const mobileMenu = document.getElementById("mobile-menu");
     if (menuButton && mobileMenu) {
       menuButton.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.toggle("hidden");
-        menuButton.setAttribute("aria-expanded", String(!isHidden));
+        mobileMenu.classList.toggle("hidden");
+        menuButton.setAttribute("aria-expanded", String(!mobileMenu.classList.contains("hidden")));
       });
     }
   </script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omondi Eric | Services</title>
+  <meta name="description" content="Menstrual health training, reusable product pathways, facilitation, and advocacy services by Omondi Eric and Esonga Menstrual Care, Busia Uganda.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { midnight: "#061126", navy: "#0a1f44", cobalt: "#123a7b", aqua: "#30c5ff" },
+          fontFamily: { sans: ["Outfit", "system-ui", "sans-serif"], display: ["Fraunces", "Georgia", "serif"] }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="portfolio-page antialiased">
+  <header class="pointer-events-none fixed inset-x-0 top-6 z-50 flex justify-center px-4">
+    <nav class="nav-shell pointer-events-auto relative z-50 flex w-full max-w-6xl flex-wrap items-center justify-between gap-2 rounded-2xl px-3 py-2.5 sm:px-5 sm:py-3">
+      <a href="index.html" class="font-display shrink-0 text-base font-semibold text-white sm:text-lg">Omondi Eric</a>
+      <button id="mobile-menu-button" type="button" class="inline-flex shrink-0 rounded-lg border border-white/15 p-2 text-slate-200 hover:border-aqua/40 hover:text-aqua md:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-feather="menu" class="h-5 w-5"></i>
+      </button>
+      <div class="hidden items-center gap-0.5 text-xs font-medium md:flex xl:gap-1 xl:text-sm">
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="index.html">Home</a>
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="about.html">About</a>
+        <a class="rounded-full bg-white/[0.1] px-3 py-1.5 text-aqua xl:px-4" href="services.html">Services</a>
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="impact.html">Impact</a>
+        <a href="contact.html" class="nav-contact-btn ml-1 shrink-0 py-2 text-xs xl:ml-2 xl:text-sm">Contact</a>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="pointer-events-auto fixed inset-x-4 top-28 z-[60] hidden max-h-[calc(100vh-8rem)] overflow-y-auto rounded-xl border border-white/10 bg-midnight py-3 md:!hidden">
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="index.html">Home</a>
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="about.html">About</a>
+      <a class="block px-4 py-2.5 text-sm font-medium text-aqua" href="services.html">Services</a>
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="impact.html">Impact</a>
+      <div class="px-3 pt-2">
+        <a href="contact.html" class="nav-contact-btn !flex w-full justify-center text-sm no-underline">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative mx-auto max-w-6xl px-4 pb-24 pt-32 sm:px-6 lg:pb-28 lg:pt-36">
+    <section class="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+      <div>
+        <p class="eyebrow">What we offer</p>
+        <h1 class="font-display mt-3 text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl">Services for districts, NGOs, schools, and funders</h1>
+        <p class="mt-6 leading-relaxed text-slate-400">
+          Structured support from Esonga Menstrual Care and Omondi Eric — from multi-day trainings to advisory on how menstrual programmes fit budgets, safeguarding, and WASH corridors.</p>
+        <ul class="mt-6 flex flex-wrap gap-3 text-sm">
+          <li class="inline-flex items-center gap-2 text-slate-500"><i data-feather="map-pin" class="h-4 w-4 text-aqua"></i> Busia &amp; partner districts</li>
+          <li class="inline-flex items-center gap-2 text-slate-500"><i data-feather="clock" class="h-4 w-4 text-aqua"></i> In-person · hybrid briefings</li>
+        </ul>
+        <p class="mt-8"><a href="contact.html" class="nav-contact-btn inline-flex py-3 no-underline">Request a proposal</a></p>
+      </div>
+      <div>
+        <img src="assets/eric-usmission.png" alt="Omondi Eric at a U.S. Mission Uganda-related programme event" class="img-cover aspect-[16/11] border border-white/10 object-cover lg:aspect-video" loading="lazy" />
+        <p class="mt-2 text-xs text-slate-600">Partnership-ready documentation for grants and diplomacy-facing portfolios.</p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">Core offerings</p>
+          <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Service lines</h2>
+        </div>
+      </div>
+      <div class="divide-y divide-slate-600/35 border-y border-slate-600/35">
+        <div class="flex gap-4 py-8 md:gap-6">
+          <i data-feather="users" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <div>
+            <h3 class="font-display text-lg text-white">Community &amp; school trainings</h3>
+            <p class="mt-2 max-w-prose text-sm leading-relaxed text-slate-500">Reusable pad and liquid soap production; menstrual hygiene facilitation; safeguarding-aware sessions for SMCs and peer educators.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 py-8 md:gap-6">
+          <i data-feather="truck" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <div>
+            <h3 class="font-display text-lg text-white">Access &amp; last-mile pathways</h3>
+            <p class="mt-2 max-w-prose text-sm leading-relaxed text-slate-500">Design inputs for kiosk-style distribution, stocking logic, privacy-respecting outreach, and light monitoring without exposing beneficiaries.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 py-8 md:gap-6">
+          <i data-feather="mic" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <div>
+            <h3 class="font-display text-lg text-white">Advocacy &amp; male-ally facilitation</h3>
+            <p class="mt-2 max-w-prose text-sm leading-relaxed text-slate-500">Baraza dialogues, media talking points, and stigma-reduction formats that enlist men without turning girls into spectacle.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 py-8 md:gap-6">
+          <i data-feather="file-text" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <div>
+            <h3 class="font-display text-lg text-white">Documents &amp; programme design support</h3>
+            <p class="mt-2 max-w-prose text-sm leading-relaxed text-slate-500">TOR review, menstrual budget annexes for WASH tenders, Theory of Change language, and linkage to cited public references where useful.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 py-8 md:gap-6">
+          <i data-feather="message-circle" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+          <div>
+            <h3 class="font-display text-lg text-white">Speaking &amp; partnership convenings</h3>
+            <p class="mt-2 max-w-prose text-sm leading-relaxed text-slate-500">Panels and keynotes on period poverty entrepreneurship, sanitation rights framing, and school retention mechanics — moderated for dignity-first tone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-band py-12 sm:py-14">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:grid lg:grid-cols-5 lg:items-center lg:gap-10">
+        <div class="lg:col-span-2">
+          <img src="assets/eric-group.png" alt="Omondi Eric with peers during an exchange programme visit" class="img-cover mb-8 aspect-video border border-white/10 object-cover lg:mb-0" loading="lazy" />
+        </div>
+        <div class="lg:col-span-3">
+          <p class="eyebrow">How engagements run</p>
+          <p class="mt-4 leading-relaxed text-slate-400">
+            Typical projects start with a short needs scan (who delivers sessions, safeguarding baseline, sanitary infrastructure realities), then scoped training or advisory milestones with clear handover artefacts — facilitator notes, BOM lists, safeguarding lines, suggested follow-up touchpoints.</p>
+          <p class="mt-4 text-sm leading-relaxed text-slate-500">
+            Longer alliances may layer peer certification, district-level menstrual budget templates, or joint donor reporting drafts. Use the contact page with sector, geography, budget band, and calendar windows.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-midnight/90 py-12">
+    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-6 px-6 text-sm text-slate-500 sm:flex-row sm:items-center">
+      <span class="font-display text-white">Omondi Eric</span>
+      <a href="contact.html" class="text-aqua hover:underline">Contact for services →</a>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuButton.setAttribute("aria-expanded", String(!mobileMenu.classList.contains("hidden")));
+      });
+    }
+  </script>
+</body>
+</html>

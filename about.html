@@ -4,151 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omondi Eric | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { midnight: "#061126", navy: "#0a1f44", cobalt: "#123a7b", aqua: "#30c5ff" },
+          fontFamily: { sans: ["Outfit", "system-ui", "sans-serif"], display: ["Fraunces", "Georgia", "serif"] }
+        }
+      }
+    };
+  </script>
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body class="bg-[#061126] text-slate-100 antialiased">
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-700/40 bg-[#071a39]/85 backdrop-blur-xl shadow-lg shadow-black/30">
-    <nav class="mx-auto max-w-6xl px-4 py-4 sm:px-6">
-      <div class="flex items-center justify-between">
-        <a href="index.html" class="text-lg font-semibold tracking-wide">Omondi Eric</a>
-        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center rounded-md border border-slate-600/70 p-2 text-slate-200 transition hover:text-cyan-300 md:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-          <i data-feather="menu" class="h-5 w-5"></i>
-        </button>
-      <div class="hidden items-center gap-2 text-xs sm:text-sm md:flex md:gap-6">
-        <a class="text-slate-200 transition hover:text-cyan-300" href="index.html">Home</a>
-        <a class="rounded-full border border-cyan-300/70 bg-cyan-300/10 px-4 py-2 text-cyan-200" href="about.html">About</a>
-        <a class="text-slate-200 transition hover:text-cyan-300" href="impact.html">Impact</a>
-        <a class="text-slate-200 transition hover:text-cyan-300" href="contact.html">Contact</a>
-      </div>
-      </div>
-      <div id="mobile-menu" class="mt-3 hidden space-y-2 rounded-xl border border-slate-700/60 bg-[#071a39]/95 p-3 md:hidden">
-        <a class="block rounded-lg px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-300" href="index.html">Home</a>
-        <a class="block rounded-lg border border-cyan-300/70 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200" href="about.html">About</a>
-        <a class="block rounded-lg px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-300" href="impact.html">Impact</a>
-        <a class="block rounded-lg px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800/70 hover:text-cyan-300" href="contact.html">Contact</a>
+<body class="portfolio-page antialiased">
+  <header class="pointer-events-none fixed inset-x-0 top-6 z-50 flex justify-center px-4">
+    <nav class="nav-shell pointer-events-auto relative z-50 flex w-full max-w-6xl flex-wrap items-center justify-between gap-2 rounded-2xl px-3 py-2.5 sm:px-5 sm:py-3">
+      <a href="index.html" class="font-display shrink-0 text-base font-semibold text-white sm:text-lg">Omondi Eric</a>
+      <button id="mobile-menu-button" type="button" class="inline-flex shrink-0 rounded-lg border border-white/15 p-2 text-slate-200 hover:border-aqua/40 hover:text-aqua md:hidden" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-feather="menu" class="h-5 w-5"></i>
+      </button>
+      <div class="hidden items-center gap-0.5 text-xs font-medium md:flex xl:gap-1 xl:text-sm">
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="index.html">Home</a>
+        <a class="rounded-full bg-white/[0.1] px-3 py-1.5 text-aqua xl:px-4" href="about.html">About</a>
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="services.html">Services</a>
+        <a class="rounded-full px-3 py-1.5 text-slate-400 hover:bg-white/[0.06] hover:text-white xl:px-4" href="impact.html">Impact</a>
+        <a href="contact.html" class="nav-contact-btn ml-1 shrink-0 py-2 text-xs xl:ml-2 xl:text-sm">Contact</a>
       </div>
     </nav>
+    <div id="mobile-menu" class="pointer-events-auto fixed inset-x-4 top-28 z-[60] hidden max-h-[calc(100vh-8rem)] overflow-y-auto rounded-xl border border-white/10 bg-midnight py-3 md:!hidden">
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="index.html">Home</a>
+      <a class="block px-4 py-2.5 text-sm font-medium text-aqua" href="about.html">About</a>
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="services.html">Services</a>
+      <a class="block px-4 py-2.5 text-sm text-slate-300 hover:bg-white/[0.05]" href="impact.html">Impact</a>
+      <div class="px-3 pt-2">
+        <a href="contact.html" class="nav-contact-btn !flex w-full justify-center text-sm no-underline">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 pb-14 pt-36 sm:px-6">
-    <section class="rounded-3xl border border-slate-500/30 bg-slate-900/50 p-6 md:p-8">
-      <p class="text-xs uppercase tracking-[0.2em] text-cyan-300">About Eric</p>
-      <h1 class="mt-3 text-4xl font-bold md:text-5xl">Leadership Profile</h1>
-      <p class="mt-6 max-w-3xl leading-8 text-slate-200/90">
-        Eric Omondi is the founder of Esonga Menstrual Care in Busia, Uganda. His work centers on practical, affordable, and sustainable menstrual hygiene solutions for women and girls in rural communities where period poverty remains a major barrier to education and dignity.
-      </p>
-    </section>
-
-    <section class="mt-8 grid gap-4 md:grid-cols-2">
-      <article class="rounded-2xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <div class="inline-flex rounded-full bg-cyan-400/10 p-2 text-cyan-300">
-          <i data-feather="briefcase"></i>
-        </div>
-        <h2 class="mt-3 text-lg font-semibold">Enterprise Focus</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Esonga Menstrual Care emphasizes last-mile distribution, including mobile kiosk access to eco-friendly and reusable products.
-        </p>
-      </article>
-
-      <article class="rounded-2xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <div class="inline-flex rounded-full bg-cyan-400/10 p-2 text-cyan-300">
-          <i data-feather="message-circle"></i>
-        </div>
-        <h2 class="mt-3 text-lg font-semibold">Advocacy Voice</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Eric challenges menstrual stigma through open public education and champions inclusion as a "menstruating man" ally.
-        </p>
-      </article>
-    </section>
-
-    <section class="mt-8 grid gap-4 md:grid-cols-3">
-      <article class="rounded-2xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <div class="inline-flex rounded-full bg-cyan-400/10 p-2 text-cyan-300">
-          <i data-feather="award"></i>
-        </div>
-        <h2 class="mt-3 text-base font-semibold">MBA Qualification</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Holds an MBA qualification that strengthens leadership, strategy, and social enterprise execution for community impact.
-        </p>
-      </article>
-      <article class="rounded-2xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <div class="inline-flex rounded-full bg-cyan-400/10 p-2 text-cyan-300">
-          <i data-feather="edit-3"></i>
-        </div>
-        <h2 class="mt-3 text-base font-semibold">Public Thought Leadership</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Eric has published commentary calling for better sanitation systems, framing sanitation as a human right and a development priority.
-        </p>
-      </article>
-      <article class="rounded-2xl border border-slate-500/30 bg-[#0a1f44] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1">
-        <div class="inline-flex rounded-full bg-cyan-400/10 p-2 text-cyan-300">
-          <i data-feather="shield"></i>
-        </div>
-        <h2 class="mt-3 text-base font-semibold">Human Rights Lens</h2>
-        <p class="mt-3 text-sm leading-7 text-slate-300">
-          Coverage highlights his framing of period poverty as a dignity, education, and health rights issue for girls and women.
-        </p>
-      </article>
-    </section>
-
-    <section class="mt-8 rounded-3xl border border-cyan-300/30 bg-[#091934] p-6 md:p-7">
-      <h2 class="text-2xl font-semibold">Core Principles</h2>
-      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="rounded-xl border border-slate-600/40 p-4 text-sm text-slate-200">Dignity for every girl</div>
-        <div class="rounded-xl border border-slate-600/40 p-4 text-sm text-slate-200">Local ownership models</div>
-        <div class="rounded-xl border border-slate-600/40 p-4 text-sm text-slate-200">Affordable innovation</div>
-        <div class="rounded-xl border border-slate-600/40 p-4 text-sm text-slate-200">School retention impact</div>
+  <main class="relative mx-auto max-w-6xl px-4 pb-24 pt-32 sm:px-6 lg:pb-28 lg:pt-36">
+    <section class="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
+      <div class="lg:col-span-5 lg:sticky lg:top-36">
+        <img src="assets/eric-hero-new.png" alt="Omondi Eric in conversation at an event at Holy Cross Hall" class="img-cover aspect-[3/4] max-h-[480px] w-full border border-white/10 object-cover object-center sm:aspect-auto sm:max-h-[560px]" loading="lazy" />
+        <p class="mt-2 text-xs text-slate-600">Field and programme photography helps partners align proposals with Esonga Menstrual Care&apos;s grounded voice.</p>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="eyebrow">About Eric</p>
+        <h1 class="font-display mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">Leadership profile</h1>
+        <p class="mt-8 text-lg leading-relaxed text-slate-400">
+          Eric Omondi is the founder of <strong class="font-medium text-slate-200">Esonga Menstrual Care</strong>, rooted in <strong class="font-medium text-slate-200">Busia, Uganda</strong>. He builds hybrid programmes that braid products, fearless public menstruation discourse, and plans district teams can graft onto adolescent health mandates.</p>
+        <p class="mt-5 leading-relaxed text-slate-500">
+          Narratives Nexus Media and The Cooperator carried — plus op-eds Eric authors in outlets like the <em class="not-italic text-slate-400">Daily Monitor</em> — document how he frames reusables, soap skills, and rights language as one braided response to period poverty.</p>
       </div>
     </section>
 
-    <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-6 text-[#0a1f44] md:p-7">
-      <h2 class="text-2xl font-semibold">Sources</h2>
-      <div class="mt-5 grid gap-3 text-sm text-slate-600">
-        <a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/USEmbassyUganda/posts/introducing-2025-mandela-washington-fellow-omondi-eric-the-chief-executive-offic/1138027471699573/">U.S. Embassy Uganda fellowship post</a>
-        <a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://nexusmedia.ug/menstruation-period-poverty-a-denial-of-human-rights/">Nexus Media article on period poverty</a>
-        <a class="transition hover:text-[#0a1f44]" target="_blank" rel="noopener noreferrer" href="https://www.monitor.co.ug/uganda/oped/commentary/waste-is-not-the-enemy-neglect-is-5181540">Daily Monitor commentary by Eric Omondi</a>
+    <section class="page-section grid gap-10 lg:grid-cols-2 lg:gap-16">
+      <div>
+        <div class="section-title-row mb-4">
+          <div>
+            <p class="eyebrow">Organisation</p>
+            <h2 class="font-display mt-1 text-xl text-white md:text-2xl">Enterprise focus</h2>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-500">
+          Mobile kiosks, neighbour-stocked replenishment rhythms, inventory visibility for donors — all designed so menstrual shopping mirrors how families already acquire staple goods.</p>
+      </div>
+      <div class="border-t border-slate-600/35 pt-10 lg:border-t-0 lg:border-l lg:pl-14 lg:pt-0">
+        <div class="section-title-row mb-4">
+          <div>
+            <p class="eyebrow">Voice</p>
+            <h2 class="font-display mt-1 text-xl text-white md:text-2xl">Advocacy &amp; male allyship</h2>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-500">
+          Eric uses culturally fluent facilitation — humour where it earns trust — to draw men into menstrual budgeting at barazas while protecting girls from becoming media props.</p>
       </div>
     </section>
 
-    <section class="mt-8 rounded-3xl border border-slate-500/30 bg-[#0a1f44] p-6 md:p-7">
-      <h2 class="text-2xl font-semibold">Expanded Professional Narrative</h2>
-      <div class="mt-5 space-y-4 text-sm leading-7 text-slate-300">
-        <p>
-          Eric's leadership approach is rooted in community proximity: listening to what girls, parents, and local leaders identify as the biggest menstrual health barriers, then designing practical solutions they can replicate locally.
-        </p>
-        <p>
-          Through Esonga Menstrual Care and related field programs, his work links product access with confidence building. Training sessions are not only technical; they also build safe spaces for discussing menstruation, dignity, and social stigma.
-        </p>
-        <p>
-          His public engagement reflects a wider development lens, connecting menstrual health to education, sanitation systems, local economies, and long-term gender equity outcomes.
-        </p>
+    <section class="section-band py-12 sm:py-14">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Credentials</p>
+            <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Qualifications &amp; public voice</h2>
+          </div>
+        </div>
+        <div class="divide-y divide-slate-600/35 border-y border-slate-600/35">
+          <div class="flex gap-4 py-7">
+            <i data-feather="award" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+            <p class="text-sm leading-relaxed text-slate-400"><strong class="block text-white">MBA</strong>Finance, ops, and social enterprise pacing for menstrual programmes that survive grant cycles.</p>
+          </div>
+          <div class="flex gap-4 py-7">
+            <i data-feather="edit-3" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+            <p class="text-sm leading-relaxed text-slate-400"><strong class="block text-white">Op-eds</strong>Sanitation and neglect critiques that tie menstrual deprivation to statewide WASH accountability.</p>
+          </div>
+          <div class="flex gap-4 py-7">
+            <i data-feather="shield" class="mt-0.5 h-5 w-5 shrink-0 text-aqua"></i>
+            <p class="text-sm leading-relaxed text-slate-400"><strong class="block text-white">Rights lens</strong>Period poverty articulated as schooling, dignity, and health equities — amplified in Nexus-style interviews.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">Non-negotiables</p>
+          <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Core principles</h2>
+        </div>
+      </div>
+      <ul class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="border-l-2 border-aqua/35 pl-4 text-sm text-slate-500"><strong class="text-white">Dignity</strong> — design for bodily autonomy pathways, not gimmicks.</li>
+        <li class="border-l-2 border-aqua/35 pl-4 text-sm text-slate-500"><strong class="text-white">Ownership</strong> — neighbours lead; outsiders stage inputs briefly.</li>
+        <li class="border-l-2 border-aqua/35 pl-4 text-sm text-slate-500"><strong class="text-white">Affordability</strong> — reusables and soap tied to refill economics communities sustain.</li>
+        <li class="border-l-2 border-aqua/35 pl-4 text-sm text-slate-500"><strong class="text-white">Retention signals</strong> — aggregate attendance ethically; celebrate SMC wins anonymously.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title-row">
+        <div>
+          <p class="eyebrow">References</p>
+          <h2 class="font-display mt-1 text-2xl text-white md:text-3xl">Sources &amp; narrative</h2>
+        </div>
+      </div>
+      <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+        <div class="space-y-4 text-sm text-slate-400">
+          <a class="block hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/USEmbassyUganda/posts/introducing-2025-mandela-washington-fellow-omondi-eric-the-chief-executive-offic/1138027471699573/">U.S. Embassy Uganda fellowship post</a>
+          <a class="block hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://nexusmedia.ug/menstruation-period-poverty-a-denial-of-human-rights/">Nexus Media on period poverty</a>
+          <a class="block hover:text-aqua" target="_blank" rel="noopener noreferrer" href="https://www.monitor.co.ug/uganda/oped/commentary/waste-is-not-the-enemy-neglect-is-5181540">Daily Monitor commentary by Eric</a>
+        </div>
+        <div class="mt-10 border-t border-slate-600/35 pt-10 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+          <p class="text-sm leading-relaxed text-slate-500">
+            Eric begins with neighbourhood listening journeys; Esonga prototyping follows within days. Trainings braid biology with safeguarding so disclosures never become spectator sport. Macro partners hear menstrual budgets discussed alongside borehole tenders — keeping girls&apos; pipelines inside infrastructure politics where funds actually mobilise.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-700/50 bg-[#040d21] py-10">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p class="text-base font-semibold">Omondi Eric</p>
-          <p class="mt-1 text-sm text-slate-400">Driving dignity, inclusion, and menstrual health equity in Uganda.</p>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="https://www.linkedin.com/company/latek-stay-alliance-uganda/?originalSubdomain=ug" target="_blank" rel="noopener noreferrer" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="LinkedIn">
-            <i data-feather="linkedin" class="h-4 w-4"></i>
-          </a>
-          <a href="https://www.facebook.com/USEmbassyUganda/posts/introducing-2025-mandela-washington-fellow-omondi-eric-the-chief-executive-offic/1138027471699573/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Facebook">
-            <i data-feather="facebook" class="h-4 w-4"></i>
-          </a>
-          <a href="https://nexusmedia.ug/menstruation-period-poverty-a-denial-of-human-rights/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Media">
-            <i data-feather="mic" class="h-4 w-4"></i>
-          </a>
-          <a href="contact.html" class="rounded-full border border-slate-600/60 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Contact">
-            <i data-feather="mail" class="h-4 w-4"></i>
-          </a>
-        </div>
-      </div>
+  <footer class="border-t border-white/10 bg-midnight/90 py-12">
+    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-6 px-6 text-sm text-slate-500 sm:flex-row sm:items-center">
+      <span class="font-display text-white">Omondi Eric</span>
+      <a href="services.html" class="text-aqua hover:underline">View services →</a>
     </div>
   </footer>
 
@@ -158,8 +160,8 @@
     const mobileMenu = document.getElementById("mobile-menu");
     if (menuButton && mobileMenu) {
       menuButton.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.toggle("hidden");
-        menuButton.setAttribute("aria-expanded", String(!isHidden));
+        mobileMenu.classList.toggle("hidden");
+        menuButton.setAttribute("aria-expanded", String(!mobileMenu.classList.contains("hidden")));
       });
     }
   </script>
